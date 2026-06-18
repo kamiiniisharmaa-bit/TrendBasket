@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrendBasket · Terms & Conditions</title>
+  <!-- Font Awesome (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ===== HEADER (same as home) ===== */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .logo i {
+      color: #3b82f6;
+      font-size: 2rem;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      transition: color 0.2s;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.2rem;
+    }
+
+    .nav-icons i {
+      cursor: pointer;
+      transition: color 0.2s;
+      color: #334155;
+    }
+
+    .nav-icons i:hover {
+      color: #2563eb;
+    }
+
+    .badge {
+      background: #ef4444;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      position: relative;
+      top: -0.6rem;
+      left: -0.3rem;
+    }
+
+    /* ===== TERMS PAGE SPECIFIC ===== */
+    .terms-hero {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.5rem 3rem;
+      margin: 2.5rem 0 3rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+      border: 1px solid #f1f5f9;
+    }
+
+    .terms-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .terms-hero h1 i {
+      color: #3b82f6;
+    }
+
+    .terms-hero .sub {
+      color: #64748b;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid #eef2f6;
+      padding-bottom: 1rem;
+    }
+
+    .terms-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .terms-block {
+      background: #fafcff;
+      padding: 1.2rem 1.8rem;
+      border-radius: 1.8rem;
+      border-left: 4px solid #3b82f6;
+      transition: background 0.15s;
+    }
+
+    .terms-block:hover {
+      background: #f1f5f9;
+    }
+
+    .terms-block h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .terms-block h2 i {
+      color: #2563eb;
+      font-size: 1.1rem;
+      width: 1.6rem;
+    }
+
+    .terms-block p {
+      color: #334155;
+      margin-bottom: 0.3rem;
+    }
+
+    .terms-block ul {
+      margin: 0.6rem 0 0.2rem 1.8rem;
+      color: #1e293b;
+    }
+
+    .terms-block ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #0f172a;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+    }
+
+    .back-home i {
+      margin-right: 0.5rem;
+    }
+
+    .back-home:hover {
+      background: #1e293b;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: white;
+      border-top: 1px solid #e9edf2;
+      padding: 2rem 0 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: #475569;
+      font-size: 0.9rem;
+    }
+
+    footer i {
+      color: #2563eb;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .nav-icons {
+        justify-content: center;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .terms-hero {
+        padding: 1.8rem 1.5rem;
+      }
+      .terms-hero h1 {
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+      }
+      .terms-block {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER (exactly as home) ===== -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <i class="fas fa-shopping-basket"></i>
+      <span>TrendBasket</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <span class="badge">3</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MAIN TERMS PAGE ===== -->
+<main class="container">
+
+  <div class="terms-hero">
+    <h1>
+      <i class="fas fa-file-contract"></i> Terms & Conditions
+    </h1>
+    <div class="sub">
+      <i class="fas fa-calendar-alt" style="margin-right: 0.4rem;"></i> Last updated: June 18, 2026 &nbsp;·&nbsp; 
+      <i class="fas fa-globe"></i> TrendBasket
+    </div>
+
+    <div class="terms-content">
+
+      <div class="terms-block">
+        <h2><i class="fas fa-check-circle"></i> 1. Acceptance of Terms</h2>
+        <p>By using the TrendBasket website and services, you agree to comply with and be bound by these Terms & Conditions. If you do not agree, please do not use our site.</p>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-user"></i> 2. Account & Registration</h2>
+        <p>You may need to create an account to access certain features. You are responsible for maintaining the confidentiality of your login credentials.</p>
+        <ul>
+          <li>You must be at least 16 years old to create an account.</li>
+          <li>Provide accurate and complete information.</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-shopping-cart"></i> 3. Orders & Payments</h2>
+        <p>All orders are subject to availability and confirmation of the price. We reserve the right to cancel orders for any reason.</p>
+        <ul>
+          <li>Prices are displayed in USD and include VAT where applicable.</li>
+          <li>We accept major credit cards, PayPal, and other secure payment methods.</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-truck"></i> 4. Shipping & Returns</h2>
+        <p>Shipping times are estimates and may vary. Returns are accepted within 30 days of delivery for unworn, unwashed items with original tags.</p>
+        <ul>
+          <li>Return shipping costs are the responsibility of the customer unless the item is defective.</li>
+          <li>Refunds will be processed to the original payment method.</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-copyright"></i> 5. Intellectual Property</h2>
+        <p>All content on this site – including images, text, logos, and graphics – is the property of TrendBasket and is protected by copyright and trademark laws.</p>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-shield-alt"></i> 6. Privacy & Data</h2>
+        <p>We collect and process personal data in accordance with our Privacy Policy. We do not sell or share your data with third parties for marketing without your explicit consent.</p>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-gavel"></i> 7. Limitation of Liability</h2>
+        <p>TrendBasket is not liable for any indirect, incidental, or consequential damages arising from the use of our products or services, to the fullest extent permitted by law.</p>
+      </div>
+
+      <div class="terms-block">
+        <h2><i class="fas fa-pen"></i> 8. Changes to Terms</h2>
+        <p>We may update these Terms from time to time. The latest version will always be posted on this page. Your continued use of the site constitutes acceptance of the updated terms.</p>
+      </div>
+
+    </div> <!-- end terms-content -->
+
+    <!-- back link -->
+    <a href="#" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <span style="margin-left: 1.2rem; color: #94a3b8; font-size: 0.9rem;">
+      <i class="fas fa-envelope"></i> legal@trendbasket.com
+    </span>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p><i class="fas fa-shopping-basket"></i> TrendBasket &mdash; where style meets comfort. © 2026</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #94a3b8;">
+      <i class="fab fa-instagram"></i> · <i class="fab fa-twitter"></i> · <i class="fab fa-youtube"></i> &nbsp;|&nbsp; 
+      <a href="#" style="color: #3b82f6; text-decoration: none;">Terms</a> · 
+      <a href="#" style="color: #3b82f6; text-decoration: none;">Privacy</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

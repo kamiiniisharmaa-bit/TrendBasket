@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrendBasket · About Us</title>
+  <!-- Font Awesome (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ===== HEADER (consistent) ===== */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .logo i {
+      color: #3b82f6;
+      font-size: 2rem;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      transition: color 0.2s;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 1.2rem;
+    }
+
+    .nav-icons i {
+      cursor: pointer;
+      transition: color 0.2s;
+      color: #334155;
+    }
+
+    .nav-icons i:hover {
+      color: #2563eb;
+    }
+
+    .badge {
+      background: #ef4444;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      position: relative;
+      top: -0.6rem;
+      left: -0.3rem;
+    }
+
+    /* ===== ABOUT US PAGE SPECIFIC ===== */
+    .about-hero {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.5rem 3rem;
+      margin: 2.5rem 0 3rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+      border: 1px solid #f1f5f9;
+    }
+
+    .about-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .about-hero h1 i {
+      color: #3b82f6;
+    }
+
+    .about-hero .sub {
+      color: #64748b;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid #eef2f6;
+      padding-bottom: 1rem;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .about-block {
+      background: #fafcff;
+      padding: 1.2rem 1.8rem;
+      border-radius: 1.8rem;
+      border-left: 4px solid #3b82f6;
+      transition: background 0.15s;
+    }
+
+    .about-block:hover {
+      background: #f1f5f9;
+    }
+
+    .about-block h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .about-block h2 i {
+      color: #2563eb;
+      font-size: 1.1rem;
+      width: 1.6rem;
+    }
+
+    .about-block p {
+      color: #334155;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-block ul {
+      margin: 0.6rem 0 0.2rem 1.8rem;
+      color: #1e293b;
+    }
+
+    .about-block ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Mission & Vision special cards */
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .mv-card {
+      background: #f1f5f9;
+      padding: 1.5rem 1.8rem;
+      border-radius: 1.8rem;
+      transition: background 0.2s, transform 0.15s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .mv-card:hover {
+      background: #e9edf2;
+      transform: translateY(-3px);
+    }
+
+    .mv-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+    }
+
+    .mv-card h3 i {
+      color: #3b82f6;
+    }
+
+    .mv-card p {
+      color: #334155;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #0f172a;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+    }
+
+    .back-home i {
+      margin-right: 0.5rem;
+    }
+
+    .back-home:hover {
+      background: #1e293b;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: white;
+      border-top: 1px solid #e9edf2;
+      padding: 2rem 0 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: #475569;
+      font-size: 0.9rem;
+    }
+
+    footer i {
+      color: #2563eb;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .nav-icons {
+        justify-content: center;
+      }
+      .logo {
+        justify-content: center;
+      }
+      .about-hero {
+        padding: 1.8rem 1.5rem;
+      }
+      .about-hero h1 {
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+      }
+      .about-block {
+        padding: 1rem 1.2rem;
+      }
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER (consistent) ===== -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <i class="fas fa-shopping-basket"></i>
+      <span>TrendBasket</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <span class="badge">3</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MAIN ABOUT US PAGE ===== -->
+<main class="container">
+
+  <div class="about-hero">
+    <h1>
+      <i class="fas fa-store"></i> About TrendBasket
+    </h1>
+    <div class="sub">
+      <i class="fas fa-calendar-alt" style="margin-right: 0.4rem;"></i> Est. 2020 &nbsp;·&nbsp; 
+      <i class="fas fa-map-pin"></i> New York, NY
+    </div>
+
+    <div class="about-content">
+
+      <!-- Mission & Vision Cards (side by side) -->
+      <div class="mission-vision">
+        <div class="mv-card">
+          <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+          <p>To curate the most exciting trends and deliver them to your doorstep with care, speed, and style — making fashion accessible for everyone.</p>
+        </div>
+        <div class="mv-card">
+          <h3><i class="fas fa-eye"></i> Our Vision</h3>
+          <p>To become the world's favorite destination for trend-forward, sustainable fashion that empowers individuals to express themselves confidently.</p>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <h2><i class="fas fa-flag"></i> Who We Are</h2>
+        <p>TrendBasket was born from a simple idea: shopping should be exciting, easy, and inspiring. We're a team of fashion enthusiasts, tech lovers, and customer-obsessed dreamers who believe that style is for everyone.</p>
+        <p style="margin-top: 0.4rem;">From sneakers to accessories, we handpick each item to ensure quality, originality, and value. Our collections are refreshed weekly to keep you ahead of the curve.</p>
+      </div>
+
+      <div class="about-block">
+        <h2><i class="fas fa-heart"></i> What We Stand For</h2>
+        <ul>
+          <li><strong>Authenticity:</strong> Every product is sourced from trusted brands and verified suppliers.</li>
+          <li><strong>Sustainability:</strong> We're committed to reducing waste and offering eco-friendly options.</li>
+          <li><strong>Community:</strong> We listen, we learn, and we grow with our customers.</li>
+          <li><strong>Innovation:</strong> From AI-powered recommendations to seamless checkout, we're always evolving.</li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2><i class="fas fa-users"></i> Meet the Team</h2>
+        <p>Behind TrendBasket is a diverse crew of buyers, stylists, developers, and support specialists who work tirelessly to bring you the best experience. We're based in New York, but our reach is global.</p>
+        <ul>
+          <li><i class="fas fa-user-tie"></i> <strong>Elena V.</strong> – Co-Founder & Creative Director</li>
+          <li><i class="fas fa-user-tie"></i> <strong>Marcus J.</strong> – Co-Founder & Head of Operations</li>
+          <li><i class="fas fa-user-tie"></i> <strong>Sophia K.</strong> – Lead Curator & Buyer</li>
+          <li><i class="fas fa-user-tie"></i> <strong>David L.</strong> – Tech Lead & UX Architect</li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h2><i class="fas fa-history"></i> Our Story</h2>
+        <p>What started as a small pop-up shop in Brooklyn quickly grew into a digital destination. In 2020, we launched TrendBasket with a mission to disrupt the fast-fashion industry by offering curated, high-quality pieces at fair prices. Today, we serve thousands of customers across the US and Europe — and we're just getting started.</p>
+      </div>
+
+      <div class="about-block">
+        <h2><i class="fas fa-hand-holding-heart"></i> Giving Back</h2>
+        <p>We believe in fashion with a purpose. A portion of every sale goes to organizations that support education, environmental conservation, and social equity. We also partner with local artisans to preserve traditional craftsmanship.</p>
+      </div>
+
+    </div> <!-- end about-content -->
+
+    <!-- back link -->
+    <a href="#" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <span style="margin-left: 1.2rem; color: #94a3b8; font-size: 0.9rem;">
+      <i class="fas fa-envelope"></i> hello@trendbasket.com
+    </span>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p><i class="fas fa-shopping-basket"></i> TrendBasket &mdash; where style meets comfort. © 2026</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #94a3b8;">
+      <i class="fab fa-instagram"></i> · <i class="fab fa-twitter"></i> · <i class="fab fa-youtube"></i> &nbsp;|&nbsp; 
+      <a href="#" style="color: #3b82f6; text-decoration: none;">Terms</a> · 
+      <a href="#" style="color: #3b82f6; text-decoration: none;">Privacy</a> · 
+      <a href="#" style="color: #3b82f6; text-decoration: none;">About</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
